@@ -10,6 +10,7 @@ namespace sprawdzian_probny
     {
         static void Main(string[] args)
         {
+            #region testy dla kont
             List<Konto> bank = new List<Konto>();
             bank.Add(new Konto("Ania", 500));
             bank.Add(new Konto("Basia", 11500));
@@ -41,7 +42,18 @@ namespace sprawdzian_probny
             {
                 Console.WriteLine(konto);
             }
+            #endregion
 
+            #region testy dla RORa
+            
+            Console.WriteLine("Podaj wpłatę");
+            double.TryParse(Console.ReadLine(), out double wplata);
+
+            ROR ror = new ROR();
+            ror.Wplata(wplata);
+            ror.Odsetki();
+            Console.WriteLine($"Bieżące saldo wynosi: {ror.Saldo}");
+            #endregion
             Console.ReadKey();
         }
 
