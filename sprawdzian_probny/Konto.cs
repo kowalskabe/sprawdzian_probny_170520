@@ -37,7 +37,7 @@ namespace sprawdzian_probny
 
 		public virtual void Wyplata(int wyplata)
 		{
-			this.saldo = wyplata; 
+			this.saldo -= wyplata; 
 		}
 	}
 }
